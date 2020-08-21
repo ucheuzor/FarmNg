@@ -14,12 +14,12 @@ export class HomePage extends Component {
       <div>
         <Navigation />
         <Header
-          title='Feed the World'
           subtitle={
-            <div>
-              <h2 id='subheading'>Join the platform and help achieve our<br />
-                               goal of Global farming practice</h2>
-            </div>}
+            <h3>Join the platform and help achieve our<br />
+            goal of Global farming practice</h3>
+          }
+          img = {img1}
+          title='Feed the World'
           image={img1}
           link='/donate'
           buttonText='Fund a Farmer'

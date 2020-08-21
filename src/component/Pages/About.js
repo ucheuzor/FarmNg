@@ -12,7 +12,7 @@ export class About extends Component {
             <div>
                 <Navigation />
                 <Header
-                   image = {img}
+                   img = {img}
                    showButton = {false}
                    subtitle = {
                        <div>

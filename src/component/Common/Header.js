@@ -2,22 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = (props) => (
-            <div>
-                <header className="masthead" style = {{ backgroundImage: `url(${props.image})` }}>
-                  <div className="container">
-                     <div className = 'row'>
-                        <div className ='col-md-12'>
-                        <div className="masthead-subheading">{props.title}</div>
-                            {props.color ? <div className="masthead-heading text-uppercase">{props.subtitle}</div>
-                              : <div className="masthead-heading text-uppercase">{props.subtitle}</div>}
-                            {props.showButton
-                              ? <Link className="btn btn-success btn-xl text-uppercase" id ='btn-link' to = {props.link}> {props.buttonText}</Link> : null
-                            }
-                        </div>
-                     </div>
-                 </div>
-               </header>
-           </div>
+  <section id="hero" style={{ backgroundImage: `url(${props.img})` }}>
+    <div className="hero-container">
+      <div className="text-white">
+        <h1 id="hero-text">{props.title}</h1>
+        <h3 className="text-right hero-sub"> {props.color ? props.subtitle : props.subtitle}</h3>
+        {props.showButton
+          ? <Link className="btn btn-success btn-xl text-uppercase" id='btn-link' to={props.link}> {props.buttonText}</Link> : null
+        }
+      </div>
+    </div>
+  </section>
 );
 
 export default Header;

@@ -1,13 +1,68 @@
-body {
+/* body {
   background-size: cover;
   background-position: center center;
   background-attachment: scroll;
   background-repeat: no-repeat;
   font-family: 'Droid Serif', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+} */
+
+/* Hero section */
+*, ::before, ::after{
+  box-sizing: border-box; 
 }
 
-.col-md-12{
-    margin-top: 8%;
+#hero{
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  position: relative;
+}
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 15px;
+}
+
+section{
+  padding: 60px;
+}
+
+#hero-text{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 77px;
+  color: rgba(35, 180, 97, 0.96);;
+}
+
+.hero-sub{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 43px;
+  color: #D8D8D8;
+}
+
+#hero:before, .cards:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 /* Product Info */
@@ -73,25 +128,6 @@ body {
   border-radius: 40px;
 }
 
-header.masthead {
-  text-align: center;
-  padding-top: 17rem;
-  padding-bottom: 6rem;
-  color: #fff;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  height: 100vh;
-  position: relative;
-}
-
-@media (min-width: 768px) {
-  header.masthead {
-    padding-top: 17rem;
-    padding-bottom: 2.25rem;
-  }
-}
 
 .btn-social {
   height: 2rem;
@@ -171,6 +207,7 @@ header.masthead {
   font-weight: 400;
   font-size: 1.2em;
   letter-spacing: 1px;
+  margin-top: 20px;
   outline: none;
   color: #eee;
   cursor: pointer;
@@ -242,8 +279,8 @@ header.masthead .masthead-subheading {
 .about-page {
   font-family: 'Droid Serif', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-weight: bold;
-  font-size: 1.5em;
-  line-height: 140.62%;
+  font-size: 1.1em;
+  line-height: 110%;
   color: rgba(35, 180, 97, 0.96);
   text-align: justify;
 }
@@ -262,4 +299,25 @@ header.masthead .masthead-subheading {
 @media (min-width: 992px)
 .container, .container-lg, .container-md, .container-sm {
     max-width: 960px !important;
+};
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h3 {
+    font-size: 22px;
+  }
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
 }
