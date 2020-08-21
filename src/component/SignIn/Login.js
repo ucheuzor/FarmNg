@@ -32,17 +32,17 @@ const Login = () => {
         .oneOf([true], '')
     }),
     onSubmit: async (values, { setSubmitting }) => {
-      const loginData = ''
-      const { status, message, user } = loginData;
-      if (status === 200) {
-        localStorage.setItem('EmpowerFarmerUser', JSON.stringify(user));
-        return history.push('/sponsorDashboard');
-      }
+      // const loginData = ''
+      // const { status, message, user } = loginData;
+      // if (status === 200) {
+      //   localStorage.setItem('EmpowerFarmerUser', JSON.stringify(user));
+      //   return history.push('/sponsorDashboard');
+      // }
+      console.log(JSON.stringify(values));
       await setTimeout(() => {
-        setError(true);
-        setAlertMessage(message);
+         history.push('/sponsorDashboard');
         setSubmitting(false);
-      }, 401);
+      }, 2000);
     }
   });
 
@@ -107,7 +107,7 @@ const Login = () => {
                       </div>
                       <a href='#' className="btn btn-det btn-google btn-block text-uppercase mb-3"><i className="fab fa-google mr-2"></i> Login with Google</a>
                       <div className="text-center">
-                        <Link className="small" to ="/signup"><h6>Don't have an Account?</h6></Link>
+                        <Link className="small" to="/signup"><h6>Don't have an Account?</h6></Link>
                       </div>
                     </form>
                   </div>

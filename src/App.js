@@ -5,36 +5,41 @@ import About from './component/Pages/About';
 import SignIn from './component/SignIn/Login';
 import SignUp from './component/SignUp/SignUp';
 import './style.css';
-import  Donate from './component/Donate/Donate';
+import Donate from './component/Donate/Donate';
+import Sponsor from './component/Sponsor/SponsorDashboard';
 
 
 const App = () => (
 
-        <Router>
-            <Switch>
-                <Route
-                    path = '/'
-                    exact
-                    component = { HomePage }
-                />
-                <Route
-                    path ='/about'
-                    component = {About}
-                />
-                <Route
-                    path ='/login'
-                    component = {SignIn}
-                />
-                <Route
-                    path ='/signup'
-                    component = {SignUp}
-                />
-                 <Route
-                    path ='/donate'
-                    component = {Donate}
-                />
-            </Switch>
-       </Router>
+    <Router>
+        <Switch>
+            <Route
+                path='/'
+                exact
+                component={HomePage}
+            />
+            <Route
+                path='/about'
+                component={About}
+            />
+            <Route
+                path='/login'
+                component={SignIn}
+            />
+            <Route
+                path='/signup'
+                component={SignUp}
+            />
+            <Route
+                path='/donate'
+                component={Donate}
+            />
+            <Route
+                path='/sponsorDashboard'
+                component={Sponsor}
+            />
+        </Switch>
+    </Router>
 );
 
 export default App;

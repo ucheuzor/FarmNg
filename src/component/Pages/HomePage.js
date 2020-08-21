@@ -21,7 +21,7 @@ export class HomePage extends Component {
                                goal of Global farming practice</h2>
             </div>}
           image={img1}
-          link='/SignUp'
+          link='/donate'
           buttonText='Fund a Farmer'
           showButton={true}
         />
